@@ -1,0 +1,12 @@
+<div class="user-profile">
+  <h2>User Profile</h2>
+  <div *ngIf="userProfile; else errorTemplate">
+    <p><strong>ID:</strong> {{ userProfile.id }}</p>
+    <p><strong>Name:</strong> {{ userProfile.name }}</p>
+    <p><strong>Email:</strong> {{ userProfile.email }}</p>
+    <p><strong>Additional Info:</strong> {{ userProfile.additionalInfo }}</p> <!-- Adjust based on your actual API response -->
+  </div>
+  <ng-template #errorTemplate>
+    <p class="error">{{ errorDetail }}</p>
+  </ng-template>
+</div>

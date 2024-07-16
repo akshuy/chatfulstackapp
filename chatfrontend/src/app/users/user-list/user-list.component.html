@@ -1,0 +1,23 @@
+<div>
+  <h2>Suggestion List</h2>
+  <ul>
+    <li *ngFor="let user of suggestions">
+      {{ user.id }}-{{ user.name }}
+      <button (click)="sendInterest(user.id)">Send Interest</button>
+    </li>
+  </ul>
+</div>
+<div>
+  <h2>Received Intrest</h2>
+  <div>
+    <a routerLink="/interests">Recived Intrests</a>
+  </div>
+<div>
+  <h2>Friend List</h2>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.id }}-{{ user.name }}
+      <button (click)="openChat(user)">Message</button>
+    </li>
+  </ul>
+</div>

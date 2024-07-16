@@ -1,0 +1,10 @@
+<div>
+  <h2>Received Interests</h2>
+  <ul>
+    <li *ngFor="let interest of interests">
+      {{ interest.sender_name }} - {{ interest.status }} - {{ formatTimestamp(interest.timestamp) }}
+      <button (click)="acceptInterest(interest.id)">Accept</button>
+      <button (click)="rejectInterest(interest.id)">Reject</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <div class="message-container" #messageContainer>
+    <ul>
+      <li *ngFor="let message of messages">
+        <div [ngClass]="{'sender-message-container': message.sender === senderId, 'receiver-message-container': message.sender !== senderId}">
+          <span [ngClass]="{'sender-message': message.sender === senderId, 'receiver-message': message.sender !== senderId}">
+            {{ message.message }} <small>({{ formatTimestamp(message.timestamp) }})</small>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
