@@ -1,12 +1,17 @@
-<h2>Chat with {{ receiverName }}</h2>
-<app-chat-message-list></app-chat-message-list>
-<div>
-  
-  <h2>Send Message</h2>
-  <form [formGroup]="messageForm" (ngSubmit)="sendMessage()">
-    <label for="message">Message:</label>
-    <input id="message" formControlName="message" type="text" required />
+<h2 class="chat-header">Chat with {{ receiverName }}</h2>
 
+<app-chat-message-list></app-chat-message-list>
+
+<div class="message-form-container">
+  <h3>Send Message</h3>
+  <form [formGroup]="messageForm" (ngSubmit)="sendMessage()" class="message-form">
+    <label for="message">Message:</label>
+    <input id="message" formControlName="message" type="text" placeholder="Type your message here..." />
     <button type="submit" [disabled]="messageForm.invalid">Send</button>
   </form>
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+  <a routerLink="/login" class="login-link">Login</a>
 </div>

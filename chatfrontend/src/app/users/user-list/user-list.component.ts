@@ -11,6 +11,7 @@ import { InterestService } from '../../interests/interest.service';
 export class UserListComponent implements OnInit {
   users: any[] = []; // Initialize with an empty array
   suggestions: any[] = []; // Initialize with an empty array for suggestions
+  errorMessage: string = ''; // Variable to store error messages
 
   constructor(
     private userService: UserService,
@@ -19,13 +20,22 @@ export class UserListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(response => {
-      this.users = response;
-    });
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.userService.getUsers().subscribe(response => {
+        this.users = response;
+      }, error => {
+        this.handleError(error);
+      });
 
-    this.userService.getSuggestions().subscribe(response => {
-      this.suggestions = response;
-    });
+      this.userService.getSuggestions().subscribe(response => {
+        this.suggestions = response;
+      }, error => {
+        this.handleError(error);
+      });
+    } else {
+      this.errorMessage = 'User is not authenticated';
+    }
   }
 
   sendInterest(receiverId: number) {
@@ -36,12 +46,23 @@ export class UserListComponent implements OnInit {
         console.log('Interest sent successfully', response);
         // Optionally, update the UI to reflect the interest has been sent
       }, error => {
-        console.error('Error sending interest', error);
+        this.handleError(error);
       });
+    } else {
+      this.errorMessage = 'User is not authenticated';
     }
   }
 
   openChat(user: { id: number, name: string }) {
     this.router.navigate(['/chat', user.id, user.name]);
+  }
+
+  private handleError(error: any) {
+    if (error.status === 401) {
+      this.errorMessage = 'Unauthorized: Please log in again.';
+    } else {
+      this.errorMessage = 'An error occurred. Please try again later.';
+    }
+    console.error('Error:', error);
   }
 }

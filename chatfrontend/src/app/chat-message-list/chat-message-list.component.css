@@ -1,56 +1,66 @@
 .message-container {
-    max-height: 400px; /* Adjust this value as needed */
-    max-width: 900px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  li {
-    margin-bottom: 10px; /* Add some margin between messages */
-    display: flex;
-    justify-content: flex-start; /* Default to left alignment */
-  }
-  
-  .sender-message-container {
-    display: flex;
-    justify-content: flex-end; /* Align sender messages to the right */
-    width: 100%;
-  }
-  
-  .receiver-message-container {
-    display: flex;
-    justify-content: flex-start; /* Align receiver messages to the left */
-    width: 100%;
-  }
-  
-  .sender-message {
-    background-color: red;
-    color: white; /* Optional: change text color for better contrast */
-    padding: 2px 4px;
-    border-radius: 3px;
-    display: inline-block;
-    margin: 2px 0; /* Add some margin for better spacing */
-    max-width: 40%; /* Prevent the message from taking the entire width */
-    word-wrap: break-word;
-  }
-  
-  .receiver-message {
-    background-color: blue;
-    color: white; /* Optional: change text color for better contrast */
-    padding: 2px 4px;
-    border-radius: 3px;
-    display: inline-block;
-    margin: 2px 0; /* Add some margin for better spacing */
-    max-width: 40%; /* Prevent the message from taking the entire width */
-    word-wrap: break-word;
-  }
-  
+  max-height: 400px; 
+  max-width: 900px;
+  overflow-y: auto;
+  border: 1px solid #6d8d74;
+  padding: 10px;
+  background-color: #1d2a2370; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  margin-bottom: 10px; 
+}
+
+.sender-message-container,
+.receiver-message-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.sender-message-container {
+  justify-content: flex-end; 
+}
+
+.receiver-message-container {
+  justify-content: flex-start; 
+}
+
+.sender-message,
+.receiver-message {
+  padding: 8px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 4px 0;
+  max-width: 60%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.sender-message {
+  background-color: #007bff;
+  color: #fff; 
+}
+
+.receiver-message {
+  background-color: #28a745; 
+  color: #fff; 
+}
+
+
+.timestamp {
+  display: block;
+  font-size: 12px; 
+  color: #010a1a; 
+  margin-top: 4px; 
+}

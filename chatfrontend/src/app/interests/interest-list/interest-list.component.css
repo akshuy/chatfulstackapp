@@ -1,0 +1,100 @@
+/* Container for the received interests section */
+.received-interests-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the section */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Title of the section */
+  .received-interests-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark color for better readability */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* List of interests */
+  .interests-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Each interest item */
+  .interest-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px;
+    background-color: #fff; /* White background for items */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for items */
+  }
+  
+  /* Info section within each interest item */
+  .interest-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sender name styling */
+  .interest-sender {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Status styling */
+  .interest-status {
+    font-size: 14px;
+    color: #888; /* Gray color for status */
+  }
+  
+  /* Timestamp styling */
+  .interest-timestamp {
+    font-size: 12px;
+    color: #aaa; /* Lighter gray color for timestamp */
+  }
+  
+  /* Actions section within each interest item */
+  .interest-actions {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  /* Common button styling */
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  /* Success button styling */
+  .btn-success {
+    background-color: #28a745; /* Green background */
+  }
+  
+  .btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  /* Danger button styling */
+  .btn-danger {
+    background-color: #dc3545; /* Red background */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  

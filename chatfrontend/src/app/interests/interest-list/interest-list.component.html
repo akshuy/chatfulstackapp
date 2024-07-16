@@ -1,10 +1,16 @@
-<div>
-  <h2>Received Interests</h2>
-  <ul>
-    <li *ngFor="let interest of interests">
-      {{ interest.sender_name }} - {{ interest.status }} - {{ formatTimestamp(interest.timestamp) }}
-      <button (click)="acceptInterest(interest.id)">Accept</button>
-      <button (click)="rejectInterest(interest.id)">Reject</button>
+<div class="received-interests-container">
+  <h2 class="received-interests-title">Received Interests</h2>
+  <ul class="interests-list">
+    <li *ngFor="let interest of interests" class="interest-item">
+      <div class="interest-info">
+        <span class="interest-sender">{{ interest.sender_name }}</span>
+        <span class="interest-status">{{ interest.status }}</span>
+        <span class="interest-timestamp">{{ formatTimestamp(interest.timestamp) }}</span>
+      </div>
+      <div class="interest-actions">
+        <button (click)="acceptInterest(interest.id)" class="btn btn-success">Accept</button>
+        <button (click)="rejectInterest(interest.id)" class="btn btn-danger">Reject</button>
+      </div>
     </li>
   </ul>
 </div>

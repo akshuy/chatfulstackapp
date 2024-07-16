@@ -1,0 +1,23 @@
+[33mcommit 32be4969539173e1c69ce77487e9c8ecb93d5f4d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: akshay <akshayshama3@gmail.com>
+Date:   Tue Jul 16 12:06:05 2024 +0530
+
+    Tested
+
+[33mcommit 74da292ad3b31009bc2778dee09a91046a881a7d[m
+Author: akshay <akshayshama3@gmail.com>
+Date:   Tue Jul 16 11:01:00 2024 +0530
+
+    redy to use with realtime chat
+
+[33mcommit 04ffc45e7e3d11d7733a693828e9001feec7b831[m
+Author: akshay <akshayshama3@gmail.com>
+Date:   Tue Jul 9 17:05:35 2024 +0530
+
+    websocket for Real-time Chat System
+
+[33mcommit 9efc880707092f75d55ed84516eaa6a7cf8cf079[m
+Author: akshay <akshayshama3@gmail.com>
+Date:   Tue Jul 9 09:58:29 2024 +0530
+
+    create backend using django

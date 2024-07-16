@@ -9,7 +9,7 @@ export class UserService {
 
   private apiUrl = 'http://127.0.0.1:8000/chat/list/';
   private suggestApiUrl = 'http://127.0.0.1:8000/chat/suggest/';  // Suggestion API URL
-  private intrestrequest = 'http://127.0.0.1:8000/chat/suggest/';
+  
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any[]> {

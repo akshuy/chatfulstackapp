@@ -1,23 +1,30 @@
-<div>
-  <h2>Suggestion List</h2>
-  <ul>
-    <li *ngFor="let user of suggestions">
-      {{ user.id }}-{{ user.name }}
-      <button (click)="sendInterest(user.id)">Send Interest</button>
-    </li>
-  </ul>
-</div>
-<div>
-  <h2>Received Intrest</h2>
-  <div>
-    <a routerLink="/interests">Recived Intrests</a>
+<div class="container">
+  <section class="suggestion-section">
+    <h2 class="section-title">Suggestion List</h2>
+    <ul class="user-list">
+      <li *ngFor="let user of suggestions" class="user-item">
+        <span>{{ user.id }} - {{ user.name }}</span>
+        <button class="btn btn-primary" (click)="sendInterest(user.id)">Send Interest</button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="interest-section">
+    <app-interest-list></app-interest-list>
+  </section>
+
+  <section class="friend-section">
+    <h2 class="section-title">Friend List</h2>
+    <ul class="user-list">
+      <li *ngFor="let user of users" class="user-item">
+        <span>{{ user.id }} - {{ user.name }}</span>
+        <button class="btn btn-secondary" (click)="openChat(user)">Message</button>
+      </li>
+    </ul>
+  </section>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+    <a routerLink="/login" class="error-link">Login</a>
   </div>
-<div>
-  <h2>Friend List</h2>
-  <ul>
-    <li *ngFor="let user of users">
-      {{ user.id }}-{{ user.name }}
-      <button (click)="openChat(user)">Message</button>
-    </li>
-  </ul>
 </div>

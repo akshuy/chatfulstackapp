@@ -25,8 +25,10 @@ step 3 run django project
 => python manage.py runserver
 
 ** make sure redis is installed for stablishing the connection between users for real time chat
+```
+## Frontend Setup (Angular)
 
-
+```bash
 Frontend Setup (Angular)
 Step 4: Run Frontend
 Navigate to the frontend directory and start the Angular development server:
@@ -45,3 +47,6 @@ This `README.md` provides clear and structured instructions for setting up both 
 ```
 ## Video link
 https://app.screencastify.com/v3/watch/co5hxXOSC1Rjvsibp7M2
+
+## GitHub link
+https://github.com/akshuy/chatfulstackapp?tab=readme-ov-file
